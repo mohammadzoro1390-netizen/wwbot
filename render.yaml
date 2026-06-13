@@ -1,0 +1,9 @@
+services:
+  - type: worker
+    name: wwbot
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python bot.py
+    envVars:
+      - key: PYTHONUNBUFFERED
+        value: "1"
